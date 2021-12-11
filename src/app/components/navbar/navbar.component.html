@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <div class="container">
+    <div class="navbar-brand"><a class="navbar-item" href="#"><img src="assets/img/icon-motor.png" alt=""></a></div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto ml-auto mb-2 mb-lg-0 flex">
+        <li class="nav-item">
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              [(ngModel)]="searchTerm"
+              (keyup)="searchProduct($event)"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-secondary" type="submit">Search</button>
+          </form>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img width="40" class="rounded-circle" src="" />
+            Hello,
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a routerLink="/profile" class="dropdown-item" >Profile</a></li>
+            <li><a routerLink="/home" class="dropdown-item" >Logout</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a routerLink="/login" class="dropdown-item">Sign In</a></li>
+            <li><a routerLink="/register" class="dropdown-item">Sign Up</a></li>
+          </ul>
+        </li> 
+      </ul>
+    </div>
+    <button routerLink="cart" class="btn btn-secondary">
+      <i style="font-size:30px " class="fas fa-cart-plus bg-secondary"></i>
+      <div style="font-size:10px" class="badge bg-danger">{{totalItem}}</div>
+    </button>
+  </div>
+</nav>
