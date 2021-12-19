@@ -11,7 +11,7 @@ class Routes {
   }
 
   routes = () => {
-    this.router.use("/user", userRouter);
+    this.router.use("/auth", userRouter);
     this.router.use("/product", productRouter);
   };
 }
